@@ -51,7 +51,7 @@ func (c *Cache) Set(key string, value interface{}, ttl time.Duration) {
 	}
 }
 
-func (c *Cache) Get(key string) interface{}, error {
+func (c *Cache) Get(key string) (interface{}, error) {
 	if value, ok := c.data[key]; ok {
 		return value, nil
 	}
